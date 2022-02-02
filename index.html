@@ -1,0 +1,100 @@
+<!-- T.A.K.A.K.R. Abayakoon -->
+<!-- IIT ID: 20191030 -->
+<!-- UoW ID: w1810560 -->
+
+<!-- Works the best with google chrome -->
+<!-- Filters WORKING -->
+<!-- UI widgets WORKING -->
+<!-- Favourite list WORKING -->
+<!-- Seamless favourite list among pages WORKING -->
+<!-- Remove from favourite list button WORKING -->
+<!-- Draag & drop WORKING -->
+<!-- Cart NOT WORKING (Out of the Coursework scope, Added for the appearance and for the future developments) -->
+
+<!-- Responsive Layouts: Large Computer Screen, iPad Mini(Landscape/Portrait) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoePLANET</title>
+
+    <link rel="stylesheet" href="stylesheets/index_page_styles.css">
+    <link rel="stylesheet" href="stylesheets/header_styles.css">
+    <link rel="stylesheet" href="stylesheets/cart_wishlist_section.css">
+    <link rel="stylesheet" href="stylesheets/footer_styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+</head>
+<body>
+    <header></header>
+
+    <section id="body_sections">
+        <aside id="shoe_filter">
+            <div id="shoe_filter_fixed_wrap">
+                <div id="shoe_filter_accordion">
+                    <h3>Gender</h3>
+                    <section id="gender_filter">
+                        <input type="radio" name="gender" id="women" value="Women">
+                        <label for="women" id="mylbl">Women</label>
+                        <input type="radio" name="gender" id="men" value="Men">
+                        <label for="men">Men</label>
+                    </section>
+                    <h3>Style</h3>
+                    <section id="style_filter"></section>
+                    <h3>Colour</h3>
+                    <section id="color_filter"></section>
+                    <h3>Size</h3>
+                    <section id="size_filter">
+                        <input type="radio" name="size" id="size_4" value="4">
+                        <label for="size_4" class="size_lbl">4</label>
+                        <input type="radio" name="size" id="size_4_5" value="4.5">
+                        <label for="size_4_5" class="size_lbl">4.5</label>
+                    </section>
+                    <h3>Price Range</h3>
+                    <section id="price_filter">
+                        <div id="price_slider"></div><br>
+                        <div id="minMaxPricesDiv">
+                            <label id="minPricesLbl">0</label>
+                            <span>-</span>
+                            <label id="maxPricesLbl">0</label>
+                        </div>
+                    </section>
+                    <br><br>
+                </div>
+                <input type="button" value="Search" id="search_btn"><br><br>
+            </div>
+        </aside>
+            
+        <div class="searchResults">
+            <div class="searchResultCards" id="searchResultCards"></div>
+        </div>
+
+        <aside class="cartWishListSection" id="cartWishListSection">
+            <div class="cartWishListFixedWrap">
+                <ul>
+                    <li><a href="#savedItems"><img src="images/icons/favorite_border_white.svg" alt="Image not avaiilable."></a></li>
+                    <li><a href="#shoppingCart"><img src="images/icons/shopping_cart_white.svg" alt="Image not avaiilable."></a></li>
+                </ul>
+
+                <div id="savedItems"></div>
+                <div id="shoppingCart"></div>
+            </div>
+        </aside>
+
+    </section>
+
+    <br>
+    <footer id="footer"></footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="header_footer.js"></script>
+    <script src="index_page_scripts.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>

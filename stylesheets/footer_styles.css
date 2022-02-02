@@ -1,0 +1,157 @@
+footer {
+    margin-top: 40px;
+    padding-top: 40px;
+    height: 400px;
+    background-color: transparent;
+    background-color: #31292d;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+footer section {
+    padding: 20px;
+    display: block;
+    flex-direction: column;
+    height: 300px;
+    /* color: #fff; */
+}
+footer section h4 {
+    font-size: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+footer section :not(h4) {
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+footer section div {
+    display: flex;
+    flex-direction: column;
+}
+footer section div span[class^="my"]::before {
+    content: "";
+    display: flex;
+    background-size: 40px;
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 0 10px 0 0;    
+}
+footer section div span[class="myName"]::before {
+    background-image: url("../images/icons/store_white.svg");
+}
+footer section div span[class="myAddress"]::before {
+    background-image: url("../images/icons/location_white_icon.svg");
+}
+footer section div span[class="myEmail"]::before {
+    background-image: url("../images/icons/email_white_icon.svg");
+}
+footer section form {
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
+}
+footer section form div {
+    padding: 3px;
+    display: inline;
+    font-size: 20px;
+    margin: 0px;
+}
+footer section form input {
+    color: white;
+    padding: 3px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: white 2px solid;
+}
+footer section form input::placeholder {
+    color: white;
+}
+footer section form input:invalid {
+    color: red;
+}
+footer section form button {
+    margin-top: 20px;
+    padding: 3px;
+    font-size: 20px;
+    width: fit-content;
+    background-color: transparent;
+    border: white 2px solid;
+    color: white;
+}
+footer section form button:hover,input:hover {
+    /* color: aqua; */
+    border: aqua 2px solid;
+}
+footer section form button:hover:disabled {
+    border: white 2px solid;
+    /* color: white; */
+}
+
+footer section .socialLinks {
+    /* font-family: 'Mukta', sans-serif;
+    font-size: 20px; */
+    color: white;
+    list-style-type: none;
+}
+footer section .socialLinks li {
+    margin-bottom: 10px;
+}
+footer section .socialLinks a {
+    color: white;
+    text-decoration: none;
+}
+footer section .socialLinks span:hover {
+    color: aqua;
+}
+footer section .socialLinks span::before {
+    content: "";
+    display: flex;
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin: 0 10px 0 0;
+}
+footer section .socialLinks li:nth-child(1) span::before {
+    background-image: url("../images/icons/sm-facebook-white-icon.svg");
+}
+footer section .socialLinks li:nth-child(2) span::before {
+    background-image: url("../images/icons/sm-linkedin-white-icon.svg");
+}
+footer section .socialLinks li:nth-child(3) span::before {
+    background-image: url("../images/icons/sm-twitter-white-icon.svg");
+}
+footer section .socialLinks li:nth-child(4) span::before {
+    background-image: url("../images/icons/sm-instagram-white-icon.svg");
+}
+
+@media screen and (max-width:940px) {
+    footer {
+        margin-top: 40px;
+        padding: 40px;
+        height: auto;
+        background-color: transparent;
+        background-color: #31292d;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+    footer section {
+        padding: 20px;
+        display: block;
+        flex-direction: column;
+        height: auto;
+        color: #fff;
+    }
+    footer section div {
+        font-family: 'Mukta', sans-serif;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+}

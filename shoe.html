@@ -1,0 +1,149 @@
+<!-- T.A.K.A.K.R. Abayakoon -->
+<!-- IIT ID: 20191030 -->
+<!-- UoW ID: w1810560 -->
+
+<!-- Draag & drop WORKING -->
+<!-- Cart NOT WORKING (Out of the Coursework scope, Added for the appearance and for the future developments) -->
+
+<!-- Responsive Layouts: Large Computer Screen, iPad Mini(Landscape/Portrait) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="stylesheets/header_styles.css">
+    <link rel="stylesheet" href="stylesheets/footer_styles.css">
+    <link rel="stylesheet" href="stylesheets/shoe_page_styles.css">
+    <link rel="stylesheet" href="stylesheets/cart_wishlist_section.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+</head>
+<body>
+    <header class="greetingSection">
+        <nav>
+            <div class="mainLogo">
+                <h4><a href="/index.html">ShoePLANET</a></h4>
+            </div>
+            <ul class="nav-link">
+                <li><a href="/index.html?gender=men">Mens</a></li>
+                <li><a href="/index.html?gender=women">Womens</a></li>
+                <li><a href="Certificates.html">Kids</a></li>
+                <li><a href="/index.html?gender=baby">Babies</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <div class="menuToggle" id="menuToggleId">
+                <div class="menuLine1"></div>
+                <div class="menuLine2"></div>
+                <div class="menuLine3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="body_sections">
+
+        <div class="midSection" id="midSection">
+
+            <section id="enlargedImageSection">
+                <button id="closeEnlargedImageBtn">X</button>
+                <div id="enlargedImageWrapper">
+                </div>
+            </section>
+            
+            <section id="mainShoeWindow">
+                <section class="shoePreviewSection">
+                    <div class="mainImageDiv" id="mainImageDiv"></div>
+                    <div class="mainImageDivWrapper">
+                        <div class="mainImageDivLeftWrapper"><button id="navToPrevImageBtn" disabled="true"></div>
+                        <div class="mainImageDivRightWrapper"><button id="navToNextImageBtn"></div>
+                    </div>
+                </section>
+                <section class="shoeDetailsSection">
+                    <h1 id="shoeName"></h1>
+                    <span class="shoePriceSpan" id="shoePriceSpan"></span><br>
+    
+                    <div class="colorGenderStyleSection" id="colorGenderStyleSection"></div><br>
+                    
+                    <span>SELECT SIZE:</span>
+                    <div id="shoeSizes"></div>
+                </section>
+            </section>
+            <section id="detailTabSection">
+                <ul>
+                    <li><a href="#productDetailsTab">Product Details</a></li>
+                    <li><a href="#paymentReturnsTab">Payment & Returns</a></li>
+                    <li><a href="#sizeGuideTab">Size Guide</a></li>
+                </ul>
+
+                <section id="productDetailsTab">
+                    <div id="productDetailsTabLeftDiv">
+                        <h1>Product description</h1><br>
+
+                        <p id="productDescriptionParagraph"></p><br>
+
+                        <ul id="quickSpecList"></ul>
+                        <br>
+                    </div>
+                    <div id="productDetailsTabRightDiv">
+                        <br>
+                        <div>
+                            <h1>Medal Rated Leather</h1><br>
+                            <span>The Upper and Lining leather in this shoe is from a tannery that has achieved a medal rating from the Leather Working Group. A third-party organisation which oversees and promotes sustainable practices within tanneries.</span>
+                        </div>
+                        <br>
+                        <img src="images/other_images/medal_rated_leather.webp" alt="Image not avaiilable.">
+                    </div>
+                </section>
+
+                <section id="paymentReturnsTab">
+                    <div id="paymentReturnsTabLeftDiv">
+                        <h1>Payment Options</h1><br>
+                        <p>Payments are handled securely by Ingenico. <br>We accept the following payments,</p><br>
+                        <div id="paymentImagesDiv">
+                            <img src="images/other_images/paymnt-paypal-logo.svg" alt="Image not avaiilable." id="paypal">
+                            <img src="images/other_images/paymnt-visa-logo.svg" alt="Image not avaiilable.">
+                            <img src="images/other_images/paymnt-mastercard-logo.svg" alt="Image not avaiilable.">
+                            <img src="images/other_images/paymnt-klarna-logo.svg" alt="Image not avaiilable.">
+                        </div>
+                        <br>
+                    </div>
+                    <div id="paymentReturnsTabRightDiv">
+                        
+                        <h1>Returns Are Free</h1><br>
+                        <p>within 28 days (14 days for sale items) to a Clarks store, via CollectPlus or via the Post Office. <br>Online orders paid for using Klarna need to be returned to our distribution centre where you will be refunded to your original form of payment.</p>
+                    </div>
+                </section>
+                <section id="sizeGuideTab">
+                    <table id="sizeGuideTable">
+                        <th>UK Size</th>
+                        <th>EU Size</th>
+                        <th>Standard EU Size</th>
+                        <th>Foot Legnth</th>
+                    </table>
+                </section>
+            </section>
+        </div>
+
+        <aside id="cartWishListSection" class="cartWishListSection">
+            <div class="cartWishListFixedWrap">
+                <ul>
+                    <li><a href="#savedItems"><img src="images/icons/favorite_border_white.svg" alt="Image not avaiilable."></a></li>
+                    <li><a href="#shoppingCart"><img src="images/icons/shopping_cart_white.svg" alt="Image not avaiilable."></a></li>
+                </ul>
+
+                <div id="savedItems"></div>
+                <div id="shoppingCart"></div>
+            </div>
+        </aside>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="header_footer.js"></script>
+    <script src="shoe_page_scripts.js"></script>
+</body>
+</html>
