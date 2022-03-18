@@ -1,11 +1,12 @@
 #cartWishListSection { 
     position: sticky;
     top: 10vh;
+    right: 0;
     height: 90vh;
     width: 280px;
     /* width: 15%; */
     border: none;
-    background-color: transparent;
+    background-color: white;
 }
 li.ui-tabs-tab.ui-corner-top.ui-state-default.ui-tab {
     background-color: rgba(0, 0, 0, 0.6);
@@ -29,6 +30,7 @@ ul.ui-tabs-nav.ui-corner-all.ui-helper-reset.ui-helper-clearfix.ui-widget-header
 .cartWishListFixedWrap {
     /* position: fixed; */
     /* width: 15%; */
+    margin-top: -60px;
     height: 90vh;
     border: black 2px solid;
 }
@@ -141,4 +143,10 @@ ul.ui-tabs-nav.ui-corner-all.ui-helper-reset.ui-helper-clearfix.ui-widget-header
 }
 .savedItemPrice::before {
     content: "\00A3";
+}
+
+@media screen and (max-width:940px) {
+    #cartWishListSection {
+        position: fixed;
+    }
 }

@@ -20,6 +20,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    justify-content: center;
 }
 .searchResultCards a {
     text-decoration: none;
@@ -135,17 +136,20 @@
     content: "\00A3";
 }
 #shoe_filter {
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 280px;
     height: 90vh;
     position: sticky;
     top: 10vh;
+    background-color: white;
+    z-index: 10;
 }
 #shoe_filter_fixed_wrap {
     border-top: black 2px solid;
     border-right: black 2px solid;
     border-bottom: black 2px solid;
     height: 90vh;
+    margin-top: -60px;
     padding: 3px;
 }
 #gender_filter, #style_filter, #color_filter, #size_filter {
@@ -255,7 +259,7 @@
         margin-left: auto;
         margin-right: auto;
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
     #gender_filter, #style_filter, #color_filter, #size_filter {
@@ -265,11 +269,23 @@
         /* gap: 5px; */
     }
 }
+@media screen and (max-width:940px) {
+    #shoe_filter {
+        position: fixed;
+    }
+}
 @media screen and (max-width:850px) {
     #gender_filter, #style_filter, #color_filter, #size_filter {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin: -5px;
         /* gap: 5px; */
+    }
+}
+
+@media screen and (max-width:414px) {
+    .searchResult {
+        width: 180px;
+        height: 400px;
     }
 }
