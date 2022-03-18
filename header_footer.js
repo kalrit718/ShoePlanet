@@ -54,6 +54,23 @@ const menuToggle = document.querySelector(".menuToggle");
 const nav = document.querySelector(".nav-link");
 const formCheck = document.querySelector("#fcheckbox");
 const formSubmitBtn = document.getElementById("fSubmitBtn");
+const cartWishListToggle = document.querySelector(".cartWishListSlideArrow");
+const cartWishList = document.querySelector(".cartWishListSection");
+const shoeFilterToggle = document.querySelector(".shoeFilterSlideArrow");
+const shoe_filter = document.querySelector(".shoe_filter");
+
+
+cartWishListToggle.addEventListener("click", () => {
+    // alert("hhh");
+    cartWishList.classList.toggle("cartWishList-active");
+    cartWishListToggle.classList.toggle("cartWishListSlideArrowToggle");
+});
+
+shoeFilterToggle.addEventListener("click", () => {
+    // alert("hhh");
+    shoe_filter.classList.toggle("shoe_filter-active");
+    shoeFilterToggle.classList.toggle("shoeFilterSlideArrowToggle");
+});
 
 menuToggle.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
